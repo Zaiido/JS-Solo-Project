@@ -507,11 +507,11 @@ Write a function called oldestMovie which finds the oldest movie in the provided
 
 */
 
-function oldestMovie(moviesArray) {
-  let oldestMovieYear = moviesArray[0]["Year"];
+function oldestMovie() {
+  let oldestMovieYear = movies[0]["Year"];
   let oldestMovieTitle = "";
-  for (let i = 0; i < moviesArray.length; i++) {
-    let movie = moviesArray[i];
+  for (let i = 0; i < movies.length; i++) {
+    let movie = movies[i];
     if (oldestMovieYear > movie.Year) {
       oldestMovieYear = movie.Year;
       oldestMovieTitle = movie.Title;
@@ -520,7 +520,7 @@ function oldestMovie(moviesArray) {
   return oldestMovieTitle;
 }
 
-console.log(oldestMovie(movies));
+console.log(oldestMovie());
 
 /* EXERCISE 13
 
@@ -528,11 +528,11 @@ Write a function called countMovies which returns the number of movies contained
 
 */
 
-function countMovies(moviesArray) {
-  return moviesArray.length;
+function countMovies() {
+  return movies.length;
 }
 
-console.log(countMovies(movies));
+console.log(countMovies());
 
 /* EXERCISE 14
 
@@ -540,15 +540,15 @@ Write a function called onlyTheTitles which creates an array with just the title
 
 */
 
-function onlyTheTitles(moviesArray) {
+function onlyTheTitles() {
   let titlesArray = [];
-  for (let i = 0; i < moviesArray.length; i++) {
-    titlesArray.push(moviesArray[i].Title);
+  for (let i = 0; i < movies.length; i++) {
+    titlesArray.push(movies[i].Title);
   }
   return titlesArray;
 }
 
-console.log(onlyTheTitles(movies));
+console.log(onlyTheTitles());
 
 /* EXERCISE 15
 
@@ -556,17 +556,17 @@ Write a function called onlyInThisMillennium which returns only the movies produ
 
 */
 
-function onlyInThisMillennium(moviesArray) {
+function onlyInThisMillennium() {
   let onlyInThisMillenniumMovies = [];
-  for (let i = 0; i < moviesArray.length; i++) {
-    if (moviesArray[i].Year >= 2000) {
-      onlyInThisMillenniumMovies.push(moviesArray[i]);
+  for (let i = 0; i < movies.length; i++) {
+    if (movies[i].Year >= 2000) {
+      onlyInThisMillenniumMovies.push(movies[i]);
     }
   }
   return onlyInThisMillenniumMovies;
 }
 
-console.log(onlyInThisMillennium(movies));
+console.log(onlyInThisMillennium());
 
 /* EXERCISE 16
 
